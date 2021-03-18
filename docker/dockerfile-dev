@@ -1,0 +1,17 @@
+FROM node:12-alpine
+
+RUN mkdir -p /reactjs-playground
+WORKDIR /reactjs-playground
+
+COPY . /reactjs-playground
+
+# since we are using local files and not copying them to docker
+# add the container's node_modules folder to docker's $PATH
+# so that it can find and watch it's dependencies
+ENV PATH /reactjs-playground/node_modules/.bin:$PATH
+
+RUN npm install
+
+EXPOSE 3000
+
+CMD ["npm", "start"]
