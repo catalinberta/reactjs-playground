@@ -13,8 +13,8 @@ import { INotesListProps } from './types';
 import { listStyles } from './styles';
 import { nanoid } from 'nanoid';
 import { INote } from '../AddNote/types';
-import { removeNote } from '../../store/actions';
 import { useDispatch } from 'react-redux';
+import { removeNote } from '@src/modules/ReduxToolkit/store/notes';
 
 const NotesList = (props: INotesListProps) => {
 	const dispatch = useDispatch();

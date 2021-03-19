@@ -3,7 +3,7 @@ import { ThemeProvider as ScThemeProvider } from 'styled-components';
 import { ThemeProvider as MuiThemeProvider } from '@material-ui/core';
 import { createMuiTheme } from '@material-ui/core/styles';
 import { Provider } from 'react-redux';
-import { store } from '@src/modules/ReduxToolkit/store';
+import store from '@src/modules/ReduxToolkit/store';
 import theme from '@src/constants/styled-components-theme';
 import muiTheme from '@src/constants/mui-theme';
 import ReduxToolkitApp from './App';

@@ -1,4 +1,9 @@
-import { createStore } from 'redux';
+import { createStore, applyMiddleware } from 'redux';
+import logger from 'redux-logger';
 import { notesReducer } from './reducer';
+import { composeWithDevTools } from 'redux-devtools-extension';
 
-export const store = createStore(notesReducer);
+const middlewares = [logger];
+const middlewareEnhancer = applyMiddleware(...middlewares);
+
+export const store = createStore(notesReducer, composeWithDevTools(middlewareEnhancer));
