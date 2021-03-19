@@ -4,6 +4,5 @@ export interface IDropdownMenuItem {
 }
 
 export interface IDropdownMenuProps {
-	data: IDropdownMenuItem[];
 	onChange: (moduleId: string) => void;
 }

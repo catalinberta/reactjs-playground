@@ -2,11 +2,11 @@ import { useSelector, useDispatch } from 'react-redux';
 import { NotesState } from './store/types';
 import { addNote } from './store/actions';
 import { AddNoteStyled, Container } from './styles';
-import NotesList from '@src/modules/ReduxToolkit/components/NotesList';
+import NotesList from '@src/modules/ReduxClassic/components/NotesList';
 import React from 'react';
 import { Typography } from '@material-ui/core';
 
-const ReduxToolkitApp = (): React.ReactElement => {
+const ReduxClassicApp = (): React.ReactElement => {
 	const notes = useSelector<NotesState, NotesState['notes']>((state) => state.notes);
 	const dispatch = useDispatch();
 
@@ -17,7 +17,7 @@ const ReduxToolkitApp = (): React.ReactElement => {
 	return (
 		<Container>
 			<Typography variant="h1" color="textPrimary">
-				Redux Toolkit Implementation
+				Redux Classic Implementation
 			</Typography>
 			<AddNoteStyled addNote={onAddNote} />
 			<NotesList data={notes} />
@@ -25,4 +25,4 @@ const ReduxToolkitApp = (): React.ReactElement => {
 	);
 };
 
-export default ReduxToolkitApp;
+export default ReduxClassicApp;

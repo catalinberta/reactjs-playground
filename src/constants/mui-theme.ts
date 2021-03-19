@@ -20,7 +20,7 @@ let muiTheme: ThemeOptions = {
 	palette: {
 		...colorPalette,
 		text: {
-			primary: colorPalette.black.main,
+			primary: '#333',
 		},
 	},
 };

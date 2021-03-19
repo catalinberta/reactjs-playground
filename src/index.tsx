@@ -1,31 +1,14 @@
-import React from 'react';
 import ReactDOM from 'react-dom';
+import { ThemeProvider as ScThemeProvider } from 'styled-components';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { ThemeProvider } from 'styled-components';
-import theme from './constants/styled-components-theme';
-import { Provider } from 'react-redux';
-import { ThemeProvider as MuiThemeProvider } from '@material-ui/core';
-import { createMuiTheme } from '@material-ui/core/styles';
-import store from './store/store';
-import muiTheme from './constants/mui-theme';
-import { QueryClient, QueryClientProvider } from 'react-query';
-
-const queryClient = new QueryClient();
+import theme from '@src/constants/styled-components-theme';
 
 ReactDOM.render(
-	<React.StrictMode>
-		<Provider store={store}>
-			<MuiThemeProvider theme={createMuiTheme(muiTheme)}>
-				<ThemeProvider theme={theme}>
-					<QueryClientProvider client={queryClient}>
-						<App />
-					</QueryClientProvider>
-				</ThemeProvider>
-			</MuiThemeProvider>
-		</Provider>
-	</React.StrictMode>,
+	<ScThemeProvider theme={theme}>
+		<App />
+	</ScThemeProvider>,
 	document.getElementById('root')
 );
 

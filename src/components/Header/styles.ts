@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import LogoImage from '../../static/assets/images/logo.png';
+import LogoWhiteImage from '@src/static/assets/images/logo-white.png';
 
 export const Wrapper = styled.div`
 	width: 100%;
@@ -16,6 +16,7 @@ export const Container = styled.div(
 	max-width: 1200px;
 	display: flex;
 	justify-content: space-between;
+	align-items: center;
 	${theme.responsive(theme.breakpoints.uhd)} {
 		max-width: 2000px;
 	}
@@ -25,8 +26,7 @@ export const Container = styled.div(
 export const Logo = styled.div`
 	width: 50px;
 	height: 50px;
-	margin: 20px 0 0 20px;
 	background-size: contain;
-	background-image: url(${LogoImage});
+	background-image: url(${LogoWhiteImage});
 	background-repeat: no-repeat;
 `;

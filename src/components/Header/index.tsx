@@ -1,29 +1,21 @@
+import modules from '@src/constants/modules';
 import React from 'react';
+import { useHistory } from 'react-router-dom';
 import DropdownMenu from '../DropdownMenu';
-import { IDropdownMenuItem } from '../DropdownMenu/types';
 import { Container, Logo, Wrapper } from './styles';
 
-const moduleList: IDropdownMenuItem[] = [
-	{
-		id: 'reduxToolkit',
-		name: 'Redux Toolkit + notes app',
-	},
-	{
-		id: 'reactQueryImdbApi',
-		name: 'react-query + GitHub Api',
-	},
-];
-
 const Header = (): React.ReactElement => {
-	const onModuleChange = (moduleId: string) => {
-		console.log('changed module', moduleId);
+	const history = useHistory();
+
+	const onModuleChange = (value: any) => {
+		history.push(modules[value].routePath);
 	};
 
 	return (
 		<Wrapper>
 			<Container>
 				<Logo data-testid="logo" />
-				<DropdownMenu data={moduleList} onChange={onModuleChange} />
+				<DropdownMenu onChange={onModuleChange} />
 			</Container>
 		</Wrapper>
 	);

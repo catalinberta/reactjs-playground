@@ -1,0 +1,57 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header Component Snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="sc-gsTCUz hWKGQE"
+  >
+    <div
+      class="sc-dlfnbm imUggJ"
+    >
+      <div
+        class="sc-hKgILt fwgyoG"
+        data-testid="logo"
+      />
+      <div
+        class="MuiFormControl-root-4 sc-bdfBwQ huyxwo makeStyles-formControl-1"
+      >
+        <label
+          class="MuiFormLabel-root-16 MuiInputLabel-root-8 MuiInputLabel-formControl-10 MuiInputLabel-animated-13 MuiInputLabel-shrink-12 MuiFormLabel-filled-18"
+          data-shrink="true"
+          id="menuItemLabel"
+        >
+          Choose playground
+        </label>
+        <div
+          class="MuiInputBase-root-41 MuiInput-root-30 MuiInput-underline-33 makeStyles-selectedEmpty-2 MuiInputBase-formControl-42 MuiInput-formControl-31"
+        >
+          <div
+            aria-haspopup="listbox"
+            class="MuiSelect-root-20 MuiSelect-select-21 MuiSelect-selectMenu-24 MuiInputBase-input-49 MuiInput-input-37"
+            role="button"
+            tabindex="0"
+          >
+            Redux Classic
+          </div>
+          <input
+            aria-hidden="true"
+            class="MuiSelect-nativeInput-29"
+            tabindex="-1"
+            value="reduxClassic"
+          />
+          <svg
+            aria-hidden="true"
+            class="MuiSvgIcon-root-56 MuiSelect-icon-25"
+            focusable="false"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M7 10l5 5 5-5z"
+            />
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

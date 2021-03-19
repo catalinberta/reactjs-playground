@@ -1,9 +1,11 @@
 import { CssBaseline } from '@material-ui/core';
 import { Route, BrowserRouter as Router, Switch } from 'react-router-dom';
 import styled from 'styled-components';
-import Header from './components/Header';
-import ClassicRedux from './modules/ReduxToolkit';
+import Header from '@src/components/Header';
+import ReduxClassic from '@src/modules/ReduxClassic';
+import ReduxToolkit from '@src/modules/ReduxToolkit';
 import { Container, Wrapper } from './styles';
+import RoutePaths from './constants/route-paths';
 
 const RootApp = () => {
 	return (
@@ -14,8 +16,11 @@ const RootApp = () => {
 				<Wrapper>
 					<Container>
 						<Switch>
-							<Route path="/">
-								<ClassicRedux />
+							<Route path={RoutePaths.ReduxClassic} exact>
+								<ReduxClassic />
+							</Route>
+							<Route path={RoutePaths.ReduxToolkit}>
+								<ReduxToolkit />
 							</Route>
 						</Switch>
 					</Container>

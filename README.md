@@ -1,10 +1,12 @@
 # ReactJS Playground
 
-A setup where multiple mini playgrounds called `modules` are build.
-Modules are self-contained mini-apps that have their own providers, therefore, are standalone from the other modules/components.
-The purpose of each module is to test a certain concept or technology.
+A setup where multiple mini playgrounds called `modules` are built.
 
-### Prerequisites
+Modules are self-contained mini-apps that have their own providers, therefore, are standalone from the other modules/components.
+
+The purpose of each module is to test a certain concept or library. (see module list below)
+
+## Prerequisites
 
 1. Install nvm:
    ```
@@ -23,7 +25,7 @@ The purpose of each module is to test a certain concept or technology.
    nvm use node
    ```
 
-#### Running from Command Line
+## Running from Command Line
 
 1. First you will need to install the npm dependencies:
    ```
@@ -47,7 +49,7 @@ The purpose of each module is to test a certain concept or technology.
 
 5. You can stop the client using `Ctrl + C`. If you need to use the console for something else, you should open a new terminal tab or window.
 
-### Main Tech Stack
+## Main Tech Stack
 
 - ReactJS (ES6)
 - Redux (RTK)
@@ -57,8 +59,8 @@ The purpose of each module is to test a certain concept or technology.
 - Material-UI
 - @testing-library w/ Jest
 
-### Modules
+## Modules
 
-## Redux Classic
+### Redux Classic
 
-## Redux Toolkit
+### Redux Toolkit

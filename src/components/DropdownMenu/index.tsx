@@ -1,11 +1,17 @@
 import { InputLabel, Select, MenuItem } from '@material-ui/core';
 import { FormControlStyled } from './styles';
-import { createMuiTheme, makeStyles, ThemeProvider } from '@material-ui/core/styles';
-import { IDropdownMenuItem, IDropdownMenuProps } from './types';
+import { createMuiTheme, makeStyles, ThemeProvider as MuiThemeProvider } from '@material-ui/core/styles';
+import { IDropdownMenuProps } from './types';
 import { nanoid } from 'nanoid';
+import muiTheme from '@src/constants/mui-theme';
+import scTheme from '@src/constants/styled-components-theme';
+import React, { useState } from 'react';
+import modules from '@src/constants/modules';
 
 const theme = createMuiTheme({
+	...muiTheme,
 	palette: {
+		...muiTheme.palette,
 		type: 'dark',
 	},
 });
@@ -14,42 +20,48 @@ const useStyles = makeStyles((theme) => ({
 	formControl: {
 		margin: theme.spacing(1),
 		minWidth: 200,
-		darkMode: true,
+		color: '#fff',
 	},
-	selectEmpty: {
-		marginTop: theme.spacing(2),
+	selectedEmpty: {
+		color: '#fff',
 	},
 	menuItem: {
-		fontSize: 16,
+		color: scTheme.colors.text.dark,
+		padding: theme.spacing(1),
 	},
 }));
 
 const DropdownMenu = (props: IDropdownMenuProps) => {
-	const handleChange = () => {};
+	const [selected, setSelected] = useState(modules.reduxClassic.id);
+
+	const handleChange = (event: React.ChangeEvent<{ name?: string | undefined; value: unknown }>) => {
+		const selectedValue = event.target.value as string;
+		setSelected(selectedValue);
+		props.onChange?.(selectedValue);
+	};
 
 	const classes = useStyles();
 
 	return (
-		<ThemeProvider theme={theme}>
+		<MuiThemeProvider theme={theme}>
 			<FormControlStyled className={classes.formControl}>
 				<InputLabel id="menuItemLabel">Choose playground</InputLabel>
-				<Select
-					labelId="menuItemLabel"
-					id="menuItem"
-					value={props.data[0].id}
-					onChange={handleChange}
-					className={classes.selectEmpty}
-				>
-					{props.data.map((menuItem: IDropdownMenuItem) => {
+				<Select value={modules[selected].id} onChange={handleChange} className={`${classes.selectedEmpty}`}>
+					{Object.keys(modules).map((moduleName) => {
 						return (
-							<MenuItem key={nanoid()} className={classes.menuItem} value={menuItem.id}>
-								{menuItem.name}
+							<MenuItem
+								key={nanoid()}
+								value={modules[moduleName].id}
+								className={`${classes.menuItem}`}
+								selected={selected === modules[moduleName].id}
+							>
+								{modules[moduleName].name}
 							</MenuItem>
 						);
 					})}
 				</Select>
 			</FormControlStyled>
-		</ThemeProvider>
+		</MuiThemeProvider>
 	);
 };
 

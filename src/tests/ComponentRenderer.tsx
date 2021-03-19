@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import React from 'react';
 import store from '../store/store';
 import muiTheme from '../constants/mui-theme';
 import { ThemeProvider } from 'styled-components';
