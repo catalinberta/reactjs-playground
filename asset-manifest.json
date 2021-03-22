@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/reactjs-playground/static/css/main.d972bc7c.chunk.css",
+    "main.js": "/reactjs-playground/static/js/main.aa975783.chunk.js",
+    "main.js.map": "/reactjs-playground/static/js/main.aa975783.chunk.js.map",
+    "runtime-main.js": "/reactjs-playground/static/js/runtime-main.a77a2a4f.js",
+    "runtime-main.js.map": "/reactjs-playground/static/js/runtime-main.a77a2a4f.js.map",
+    "static/js/2.ea338547.chunk.js": "/reactjs-playground/static/js/2.ea338547.chunk.js",
+    "static/js/2.ea338547.chunk.js.map": "/reactjs-playground/static/js/2.ea338547.chunk.js.map",
+    "static/js/3.c44a9e3d.chunk.js": "/reactjs-playground/static/js/3.c44a9e3d.chunk.js",
+    "static/js/3.c44a9e3d.chunk.js.map": "/reactjs-playground/static/js/3.c44a9e3d.chunk.js.map",
+    "index.html": "/reactjs-playground/index.html",
+    "static/css/main.d972bc7c.chunk.css.map": "/reactjs-playground/static/css/main.d972bc7c.chunk.css.map",
+    "static/js/2.ea338547.chunk.js.LICENSE.txt": "/reactjs-playground/static/js/2.ea338547.chunk.js.LICENSE.txt",
+    "static/media/index.css": "/reactjs-playground/static/media/Ubuntu-Regular.f20e45a9.woff",
+    "static/media/logo-white.83bf9144.png": "/reactjs-playground/static/media/logo-white.83bf9144.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.a77a2a4f.js",
+    "static/js/2.ea338547.chunk.js",
+    "static/css/main.d972bc7c.chunk.css",
+    "static/js/main.aa975783.chunk.js"
+  ]
+}
