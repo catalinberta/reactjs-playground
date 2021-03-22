@@ -2,9 +2,11 @@
 
 A setup where multiple mini playgrounds called `modules` are built.
 
-Modules are self-contained mini-apps that have their own providers, therefore, are standalone from the other modules/components.
+Modules are isolated mini-apps that have their own providers, therefore, are standalone from the other modules.
 
 The purpose of each module is to test a certain concept or library. (see module list below)
+
+Next steps: deployment & demo page
 
 ## Prerequisites
 
@@ -51,16 +53,27 @@ The purpose of each module is to test a certain concept or library. (see module 
 
 ## Main Tech Stack
 
-- ReactJS (ES6)
-- Redux (RTK)
-- Typescript
-- React-Query
-- Styled-Components
-- Material-UI
+- ReactJS
+- typescript
+- docker
+- redux (classic && toolkit)
+- react-query
+- styled-components
+- material-ui
 - @testing-library w/ Jest
 
 ## Modules
 
 ### Redux Classic
 
+A notes app using the classic un-opinionated redux implementation
+
 ### Redux Toolkit
+
+The same notes app with redux, but with the opinianated redux toolkit instead
+
+### useCallback() && useMemo()
+
+A parent / child example to see how useCallback && useMemo and React.memo can be useful.
+
+While it's a pretty basic example, it outlines how children can have complex layouts or some heavy data processing parts and should only re-render when necessary.
