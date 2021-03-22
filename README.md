@@ -6,7 +6,7 @@ Modules are isolated mini-apps that have their own providers, therefore, are sta
 
 The purpose of each module is to test a certain concept or library. (see module list below)
 
-Next steps: deployment & demo page
+Demo: https://catalinberta.github.io/reactjs-playground/
 
 ## Prerequisites
 
