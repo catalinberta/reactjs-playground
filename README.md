@@ -74,6 +74,6 @@ The same notes app with redux, but with the opinionated redux toolkit instead
 
 ### useCallback() && useMemo()
 
-A parent / child example to see how useCallback && useMemo and React.memo can be useful.
+A parent / child example to see how useCallback, useMemo and React.memo can be useful.
 
-While it's a pretty basic example, it outlines how children can have complex layouts or some heavy data processing parts and should only re-render when necessary.
+While it's a pretty basic example, it outlines how children can have complex layouts, data fetching or some heavy data processing part and should only re-render when necessary.
