@@ -70,7 +70,7 @@ A notes app using the classic un-opinionated redux implementation
 
 ### Redux Toolkit
 
-The same notes app with redux, but with the opinianated redux toolkit instead
+The same notes app with redux, but with the opinionated redux toolkit instead
 
 ### useCallback() && useMemo()
 
