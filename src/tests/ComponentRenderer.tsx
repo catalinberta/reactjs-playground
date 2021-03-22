@@ -1,5 +1,5 @@
 import React from 'react';
-import store from '../store/store';
+import { store } from '@src/modules/ReduxClassic/store';
 import muiTheme from '../constants/mui-theme';
 import { ThemeProvider } from 'styled-components';
 import theme from '../constants/styled-components-theme';

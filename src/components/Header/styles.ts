@@ -6,6 +6,7 @@ export const Wrapper = styled.div`
 	height: 100%;
 	display: flex;
 	justify-content: center;
+	padding: 2rem;
 	background-color: ${(props) => props.theme.colors.primary.main};
 	color: #fff;
 `;

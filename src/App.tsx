@@ -6,6 +6,7 @@ import ReduxClassic from '@src/modules/ReduxClassic';
 import ReduxToolkit from '@src/modules/ReduxToolkit';
 import { Container, Wrapper } from './styles';
 import RoutePaths from './constants/route-paths';
+import UseCallbackAndUseMemo from './modules/UseCallbackAndUseMemo';
 
 const RootApp = () => {
 	return (
@@ -21,6 +22,9 @@ const RootApp = () => {
 							</Route>
 							<Route path={RoutePaths.ReduxToolkit}>
 								<ReduxToolkit />
+							</Route>
+							<Route path={RoutePaths.UseCallbackAndUseMemo}>
+								<UseCallbackAndUseMemo />
 							</Route>
 						</Switch>
 					</Container>

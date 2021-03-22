@@ -24,6 +24,12 @@ const modules: IModules = {
 		label: 'Redux Toolkit (Notes App)',
 		routePath: RoutePaths.ReduxToolkit,
 	},
+	useCallbackAndUseMemo: {
+		id: 'useCallbackAndUseMemo',
+		name: 'useCallback() && useMemo()',
+		label: 'useCallback() && useMemo()',
+		routePath: RoutePaths.UseCallbackAndUseMemo,
+	},
 };
 
 export default modules;
