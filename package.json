@@ -44,13 +44,18 @@
 		"@types/redux-logger": "^3.0.8",
 		"@types/styled-components": "^5.1.7",
 		"cra-alias": "^4.13.19",
+		"gh-pages": "^3.1.0",
+		"react-app-rewired": "^2.1.8",
 		"redux-logger": "^3.0.6"
 	},
 	"scripts": {
-		"start": "react-dotenv && cra-alias start",
-		"build": "react-dotenv && cra-alias build",
-		"test": "react-dotenv && cra-alias test"
+		"start": "cra-alias start",
+		"build": "cra-alias build",
+		"test": "cra-alias test",
+		"predeploy": "cra-alias build",
+		"deploy": "gh-pages -d build"
 	},
+	"homepage": "https://catalinberta.github.io/reactjs-playground/",
 	"eslintConfig": {
 		"extends": [
 			"react-app",
